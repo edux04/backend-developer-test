@@ -48,7 +48,7 @@
         <b v-if="!apiResponse && action=='email'">***** ATENCION ***** Para probar esta opción debe configurar su mailtrap o su testing server en el archivo .env</b>
 
         <div v-if="apiResponse">
-            <b v-if="!errors && action=='email'">se envio un correo al mailtrap configurado en .env</b>
+            <b v-if="!errors && action=='email'">se envio un correo con el token para resetear al mailtrap configurado en .env (busque ese token y cambia a la segunda opcion en el select de arriba </b>
              <b v-if="!errors && action=='reset'">Pruebe su nueva contraseña, <a href="/users/login">Inicie sesión</a></b>
              <br>
             <h1>Respuesta api</h1>
