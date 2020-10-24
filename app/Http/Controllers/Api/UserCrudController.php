@@ -43,8 +43,8 @@ class UserCrudController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user)
-    {   if(empty($request)){
-        return response(["error"=>'You should edit the fields that you want update!']);
+    {   if(count($request->all()) > 0){
+            return response(["error"=>'You should edit the fields that you want to update!']);
         }
         $validatedData=$request->validate([
             'name'=>'max:255',
